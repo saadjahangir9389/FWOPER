@@ -51,10 +51,10 @@ if (!$con) {
 echo "Database not connected";
 }
 
-  $sql = "SELECT * FROM `employees_data`";
-  $result = mysqli_query($con,$sql);
-  $row = mysqli_fetch_assoc($result);
-    $employeeno = $row["emp_no"];
+  // $sql = "SELECT * FROM `employees_data`";
+  // $result = mysqli_query($con,$sql);
+  // $row = mysqli_fetch_assoc($result);
+  //   $employeeno = $row["emp_no"];
 
 
 ?>
@@ -197,14 +197,11 @@ echo "Database not connected";
 
           </div>
         <div class="btn-block">
- <?php
-//        if (emp_no == )
- ?>
-          <button type="submit">Submit</button>
+          <button name = 'click' type="submit">Submit</button>
         </div>
       </form>
 
-
+  
 
 
     <script>

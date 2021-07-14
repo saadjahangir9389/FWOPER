@@ -1,21 +1,5 @@
 <?php
-$database = 'admins';
-$host = 'localhost';
-$user = 'root';
-$pass = '';
 $con = mysqli_connect("localhost", "root", "", "admins");
-
-// try to conncet to database
-$dbh = new PDO("mysql:dbname={$database};host={$host};port={3306}", $user, $pass);
-
-if(!$dbh){
-
-    echo "unable to connect to database";
-};
-
-
-
-
 $emp_name = $_POST["emp_name"];
 $emp_no = $_POST["emp_no"];
 $performance = $_POST["performance"];
@@ -23,18 +7,43 @@ $warnings = $_POST["warnings"];
 $date_from = $_POST["date_from"];
 $date_to = $_POST["date_to"];
 
-$sql = "SELECT * FROM `part1` WHERE `emp_no` = '$emp_no' AND `period_from` = '$date_from' AND `period_to` = '$date_to' ";
+// $sql = "SELECT * FROM part1 WHERE emp_no = '$emp_no' AND period_from = '$date_from' AND period_to = '$date_to' ";
+// $result = mysqli_query($con,$sql);
+// $row = mysqli_fetch_assoc($result);
+// $employeeno = $row["emp_no"];
+// $datefrom = $row["period_from"];
+// $dateto = $row["period_to"];
+
+$sql = "SELECT insert_date_time from part1 where emp_no = '$emp_no'";
 $result = mysqli_query($con,$sql);
-$row = mysqli_fetch_assoc($result);
-$employeeno = $row["emp_no"];
-$datefrom = $row["period_from"];
-$dateto = $row["period_to"];
+// $row = mysqli_fetch_assoc($result);
+// $employeeno = $row["emp_no"];
+// $datefrom = $row["period_from"];
+// $dateto = $row["period_to"];
+
+while($row = mysqli_fetch_array($result)){
+    $date = $row["insert_date_time"];
+}
 
 
-if($emp_no == $employeeno && $date_from == $datefrom && $date_to == $dateto) {
+
+  if(isset($_POST['click']))
+  {
+    date_default_timezone_set('Asia/Karachi');
+
+    $date_clicked = date('Y-m-d');
+    // $current_date = date('Y-m-d');
+
+  }
+// if($emp_no == $employeeno && $date_from == $datefrom && $date_to == $dateto)
+// if($current_date == $date_clicked) 
+// {
+//     header("Location: emp-info-form.php?status=error");
+// } 
+if($date_clicked == $date && $emp_no == $emp_no){
     header("Location: emp-info-form.php?status=error");
-} else {
-    $sql = "INSERT INTO `part1` (`id`, `emp_no`, `emp_name`, `period_from`, `period_to`, `warnings`, `relevantduties`) VALUES ('', '$emp_no', '$emp_name', '$date_from', '$date_to', '$warnings', '$performance')";
+}else{
+    $sql = "INSERT INTO part1 (id,emp_no,emp_name,period_from,period_to,warnings,relevantduties,count,insert_date_time) VALUES ('', '$emp_no', '$emp_name', '$date_from', '$date_to', '$warnings', '$performance',1,'$date_clicked')";
 
     if (mysqli_query($con, $sql)) {
         header("Location: emp-info-form.php?status=success");
