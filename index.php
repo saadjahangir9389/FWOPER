@@ -7,8 +7,8 @@
     <title>P-E-R SYSTEM</title>
     <link rel="icon" href="logo.jpg" type="image/ico">
    
-    <link href="../../../../../xampp/htdocs/FWOHRPERSYSTEM-main/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../../../../../xampp/htdocs/FWOHRPERSYSTEM-main/css/style.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <style>
 
       body{
