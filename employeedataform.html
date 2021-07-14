@@ -1,0 +1,141 @@
+
+<div class="container homepage">
+  <div class="row">
+    <div class="col-md-12 welcome-page">
+
+      <img src="logo.jpg" width="80" height="80" class="center">
+
+      <h3 align="center">PERFORMANCE EVALUATION REPORT</h3>
+      <p class = "und" align="center" >PART-I</p>
+      <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
+    </div>
+  </div>
+  <form action="senddetails.php" method="POST">
+    <div class="contact-item">
+      <div class="item">
+        <p>Employee No.<span class="required">*</span></p>
+        <input type="text" name="emp_no" id = "emp_no" required onkeyup="GetDetail(this.value)" value=""/>
+      </div>
+      <div class="item">
+        <p>Full Name<span class="required">*</span></p>
+        <input type="text" name="emp_name" id = "emp_name" required readonly value=""/>
+      </div>
+    </div>
+
+    <div class="position-item">
+      <!-- <div class="item">
+        <p>Appointment<span class="required">*</span></p>
+        <select required>
+          <option value="0" disabled selected>Please Select Appointment</option>
+          <option value="1">MTO</option>
+          <option value="2">JM</option>
+          <option value="3">AM</option>
+          <option value="4">DM</option>
+          <option value="5">Manager</option>
+          <option value="5">GM</option>
+          <option value="5">DD</option>
+          <option value="5">Director</option>
+        </select>
+      </div> -->
+      <div class="item">
+        <p>Appointment<span class="required">*</span></p>
+        <input type="text" name="emp_appointment" id ="emp_appointment" required readonly value=""/>
+      </div>
+      <!-- <div class="item">
+          <p>Category<span class="required">*</span></p>
+          <select required>
+              <option value="0" disabled selected>Please Select Category</option>
+              <option value="1">FS</option>
+            <option value="2">NMS</option>
+            <option value="3">MS</option>
+          </select>
+        </div> -->
+      <div class="item">
+        <p>Category<span class="required">*</span></p>
+        <input type="text" name="emp_cat" id ="emp_cat" required readonly value=""/>
+      </div>
+
+      <div class="item">
+        <p>Date of Emp<span class="required">*</span></p>
+        <input type="text" name="emp_doe" id ="emp_doe" readonly required/>
+      </div>
+
+      <!-- <div class="item">
+        <p>Qualification<span class="required">*</span></p>
+        <select required>
+            <option value="0" disabled selected>Please Select Qualification</option>
+            <option value="1">BS</option>
+          <option value="2">MS</option>
+          <option value="3">PHD</option>
+        </select>
+      </div> -->
+      <div class="item">
+        <p>Qualification<span class="required">*</span></p>
+        <input type="text" name="emp_qualification" id = "emp_qualification"  readonly required value=""/>
+      </div>
+
+      <!-- <div class="item">
+        <p>Directorate / Group / Unit <span class="required">*</span></p>
+        <select required>
+            <option value="0" disabled selected>Please Select Directorate / Group / Unit</option>
+            <option value="1">IT</option>
+          <option value="2">Fin</option>
+          <option value="3">HR</option>
+        </select>
+      </div> -->
+
+      <div class="item">
+        <p>Directorate / Group / Unit<span class="required">*</span></p>
+        <input type="text" name="emp_dir" id = "emp_dir"  readonly required value=""/>
+      </div>
+
+      <!-- <div class="item">
+        <p>Project / Location<span class="required">*</span></p>
+        <select required>
+            <option value="0" disabled selected>Please Select Location</option>
+            <option value="1">RWP</option>
+          <option value="2">ISB</option>
+          <option value="3">KAR</option>
+        </select>
+      </div> -->
+
+      <div class="item">
+        <p>Project / Location<span class="required">*</span></p>
+        <input type="text" name="emp_pro_loc" id ="emp_pro_loc" required readonly value=""/>
+      </div>
+
+      <div class="item">
+        <p>Performance Period : From<span class="required">*</span></p>
+        <input type="date" name="date_from" value="" required/>
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+      <div class="item">
+        <p>To<span class="required">*</span></p>
+        <input type="date" name="date_to" value="" required/>
+        <i class="fas fa-calendar-alt"></i>
+      </div>
+
+      <div class="item">
+        <p>Number of Warnings / Explanation Issued During the Year (if any)  <span class="required">*</span></p>
+        <select name="warnings" required>
+          <option  value="0" disabled selected>Please Select Warning Count</option>
+          <option value="NIL">NIL</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="item">
+        <p>Is he/she Performing Duties relevent to his/her Qual & Exp (Yes / No)  <span class="required">*</span></p>
+        <select name="performance" required>
+          <option value="0" disabled selected>Please Select</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+
+    </div>
+    <div class="btn-block">
+      <button type="submit">Submit</button>
+    </div>
+  </form>
