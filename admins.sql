@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2021 at 07:07 AM
--- Server version: 10.4.19-MariaDB
--- PHP Version: 8.0.7
+-- Generation Time: Jul 14, 2021 at 02:24 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -61,16 +61,20 @@ CREATE TABLE `part1` (
   `period_to` date DEFAULT NULL,
   `warnings` varchar(20) DEFAULT NULL,
   `relevantduties` varchar(20) DEFAULT NULL,
-  `emp_no` int(50) DEFAULT NULL
+  `emp_no` int(50) DEFAULT NULL,
+  `count` int(1) NOT NULL,
+  `insert_date_time` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `part1`
 --
 
-INSERT INTO `part1` (`id`, `emp_name`, `period_from`, `period_to`, `warnings`, `relevantduties`, `emp_no`) VALUES
-(41, 'ahmad ali', '2021-07-13', '2021-08-13', 'NIL', 'yes', 12345),
-(42, '', '2021-07-13', '2021-08-13', '1', 'yes', 5566);
+INSERT INTO `part1` (`id`, `emp_name`, `period_from`, `period_to`, `warnings`, `relevantduties`, `emp_no`, `count`, `insert_date_time`) VALUES
+(11, 'haseeb javaid', '2021-07-01', '2021-07-14', 'NIL', 'yes', 6521, 1, '2021-07-14'),
+(14, 'ahmad ali', '2021-07-01', '2021-07-14', 'NIL', 'yes', 12345, 1, '2021-07-14'),
+(15, 'Ali Raza', '2021-07-01', '2021-07-14', 'NIL', 'yes', 78990, 1, '2021-07-14'),
+(16, 'Saad Jahangir', '2021-07-01', '2021-07-14', 'NIL', 'yes', 5566, 1, '2021-07-14');
 
 -- --------------------------------------------------------
 
@@ -177,7 +181,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `part1`
 --
 ALTER TABLE `part1`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `part2`
