@@ -38,12 +38,9 @@ $date_clicked = date('Y-m-d');
             <td><?php echo $i?></td>
 
             <td><?php echo $row['emp_no'];?></td>
-
             <td><?php echo $row['emp_name'];?></td>
-            
             <td><?php echo $row['insert_date_time'];?></td>
           
-
               <td>
                 <form action ="testapprove.php" method ="POST">
                     <input type = "hidden" name  ="emp_no" value = "<?php echo $row['emp_no'];?>"/>
@@ -88,7 +85,8 @@ if(isset($_POST['delete'])){
     echo 'alert("Request Deleted ");';
     echo 'window.location.href = "testapprove.php"';
     echo '</script>';
-    }else{
+    }
+    else{
         echo '<script type = "text/javascript">';
         echo 'alert("Error ! Requests from same date cannot delete delete tomorrow");';
         echo 'window.location.href = "testapprove.php"';
