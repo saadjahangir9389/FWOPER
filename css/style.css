@@ -119,7 +119,7 @@
         margin-left: 0;
         color: red;
     }
-    label.radio:before {
+    /* label.radio:before {
         content: "";
         position: absolute;
         left: 0;
@@ -146,7 +146,7 @@
     }
     input[type=radio]:checked + label:after {
         opacity: 1;
-    }
+    } */
     .btn-block {
         margin-top: 10px;
         text-align: center;

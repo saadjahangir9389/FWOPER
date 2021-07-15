@@ -51,16 +51,10 @@ if (!$con) {
 echo "Database not connected";
 }
 
-  // $sql = "SELECT * FROM `employees_data`";
-  // $result = mysqli_query($con,$sql);
-  // $row = mysqli_fetch_assoc($result);
-  //   $employeeno = $row["emp_no"];
-
-
 ?>
 
 
-  <div class="container homepage">
+  <div class="container">
   <div class="row">
   <div class="col-md-12 welcome-page">
 
@@ -196,6 +190,10 @@ echo "Database not connected";
               </div>
 
           </div>
+
+          <?php
+          include_once("jd1.php");
+          ?>
         <div class="btn-block">
           <button name = 'click' type="submit">Submit</button>
         </div>
