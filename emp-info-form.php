@@ -39,9 +39,6 @@
 
   }
   ?>
-
-
-
   </div>
    <?php
    include_once("navbar.php");
@@ -190,10 +187,6 @@ echo "Database not connected";
               </div>
 
           </div>
-
-          <?php
-          include_once("jd1.php");
-          ?>
         <div class="btn-block">
           <button name = 'click' type="submit">Submit</button>
         </div>
