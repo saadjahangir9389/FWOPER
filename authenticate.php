@@ -36,7 +36,7 @@
 		session_write_close();
 
 		if( $_SESSION['sess_userrole'] == "0"){
-			header('Location: emp-info-form.php');
+			header('Location: IOPART.php');
 			// header('Location: adminhome.php');
 		}elseif($_SESSION['sess_userrole'] == "1"){
 			// header('Location: jd.php');

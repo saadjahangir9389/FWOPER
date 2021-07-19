@@ -26,7 +26,28 @@
   </head>
   <body>
   <?php
+  @$status = $_GET['status'];
+
+  if(@$status == "error") {
+
+      echo "<div class='alert alert-danger' role='alert''> Record Already Exists </div>";
+
+  }
+
+  if(@$status == "success") {
+
+      echo "<div class='alert alert-success' role='alert''> Record Submitted </div>";
+
+  }
+  ?>
+  <?php
   include_once("navbar.php");
+  $con = mysqli_connect("localhost", "root", "", "admins");
+
+  if (!$con) {
+  echo "Database not connected";
+  }
+  
   ?>
   <div class="container">
   <div class="row">
@@ -39,7 +60,7 @@
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
     </div>
     </div>
-      <form method="psot" action="senddetails.php">
+      <form action="senddetails.php" method="post" >
         <div class="contact-item">
             <div class="item">
               <p>Employee No.<span class="required">*</span></p>
@@ -135,20 +156,20 @@
 
               <div class="item">
                 <p>Performance Peroid : From<span class="required">*</span></p>
-                <input type="date" name="period_from" required/>
+                <input type="date" name="date_from" required/>
                 <i class="fas fa-calendar-alt"></i>
               </div>
               <div class="item">
                 <p>To<span class="required">*</span></p>
-                <input type="date" name="period_to" required/>
+                <input type="date" name="date_to" required/>
                 <i class="fas fa-calendar-alt"></i>
               </div>
 
               <div class="item">
                 <p>Number of Warnings / Explanation Issued During the Year (if any)  <span class="required">*</span></p>
-                <select required>
+                <select name="warnings" required>
                     <option value="0" disabled selected>Please Select Warning Count</option>
-                    <option value="1">NIL</option>
+                    <option value="NIL">NIL</option>
                   <option value="2">1</option>
                   <option value="3">2</option>
                   <option value="3">3</option>
@@ -156,10 +177,10 @@
               </div>
               <div class="item">
                 <p>Is he/she Performing Duties relevent to his/her Qual & Exp (Yes / No)  <span class="required">*</span></p>
-                <select required>
+                <select name = "performance" required>
                     <option value="0" disabled selected>Please Select</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
                 </select>
               </div>
              
