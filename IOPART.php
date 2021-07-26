@@ -4,6 +4,8 @@
     if(!isset($_SESSION['sess_username']) && $role!="0"){
       header('Location: index.php?err=2');
     }
+
+    
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +62,7 @@
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
     </div>
     </div>
-      <form action="senddetails.php" method="post" >
+      <form action="senddetails.php" method="post" id= 'myform' >
         <div class="contact-item">
             <div class="item">
               <p>Employee No.<span class="required">*</span></p>
@@ -212,35 +214,36 @@
     <td>Prep of PEP a/w Ctgys</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a1" id="a1" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <!-- <td id='result'></td> -->
+    <td></td>
    
   </tr>
 
@@ -249,35 +252,35 @@
     <td>Ensuring implementation of PEP</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a2" id="a2" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
   <tr>
@@ -285,70 +288,70 @@
     <td>Material Mgmt</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a3" id="a3" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
   </tr>
   <tr>
     <td>d.</td>
     <td>Mgmt of fin health of proj</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a4" id="a4" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
   <tr>
@@ -356,35 +359,35 @@
     <td>Conflict mgmt. with all stake reg and bldgs / const codes</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a5" id="a5" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a5" id="a5" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a5" id="a5" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a5" id="a5" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a5" id="a5" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="s5" id="a5" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
   <tr>
@@ -392,35 +395,35 @@
     <td>Ensure compliance with safety reg and bldgs / const codes</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a6" id="a6" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
   <tr>
@@ -428,35 +431,35 @@
     <td>Alloc and manage of resources as per const cycle / ph</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a7" id="a7" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
   <tr>
@@ -464,35 +467,35 @@
     <td>Monitor Stocks / Sch B items to timely handle inadequacies</td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a8" id="a8" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
    
   </tr>
 
@@ -501,35 +504,35 @@
     <td>Is he Performing Duties relevant to his Qual & Exp and Misc Aspects (If any not covered above) </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "4">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "3">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="a9" id="a9" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
   </tr>
  <tr>
     <td colspan="8" align="center"><strong>Total Marks (45)</strong> </td>
@@ -562,35 +565,35 @@
                 <td>Temperament</td>
                 <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "2">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "1.75">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "1.5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "1">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "0.5">
     </div>
     </td>
     <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b1" id="b1" value = "0">
     </div>
     </td>
-    <td>2</td>
+    <td></td>
                
 </tr>
 <tr>
@@ -598,35 +601,35 @@
                 <td>Acceptance of Responsibility</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b2" id="b2" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
               <tr>
@@ -634,70 +637,70 @@
                 <td>Comprehension Level</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b3" id="b3" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
               </tr>
               <tr>
                 <td>d.</td>
                 <td>Initiative and Drive</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b4" id="b4" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
               <tr>
@@ -705,35 +708,35 @@
                 <td>Appearance & Dress Code</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b5" id="b5" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
               <tr>
@@ -741,35 +744,35 @@
                 <td>Respect for Authority</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b6" id="b6" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
               <tr>
@@ -777,35 +780,35 @@
                 <td>Self-Discipline - Punctuality / Personal Conduct</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b7" id="b7" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
               <tr>
@@ -813,35 +816,35 @@
                 <td>Team Work</td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b8" id="b8" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
                
               </tr>
 
@@ -850,70 +853,70 @@
                 <td>Innovation & Change </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b9" id="b9" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
               </tr>
               <tr>
                 <td>j.</td>
                 <td>Decision Making / Analytical Skills </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "2">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "1.75">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "1.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "1">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "0.5">
     </div>
     </td>
                <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="b10" id="b10" value = "0">
     </div>
     </td>
-                <td>2</td>
+                <td></td>
               </tr>
              <tr>
                 <td colspan="8" align="center"><strong>Total Marks (20)</strong> </td>
@@ -946,35 +949,35 @@
         <td>Project Timelines</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c1" id="c1" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
        
       </tr>
 
@@ -983,35 +986,35 @@
         <td>Project Implementation within stipulated budget in first PEP</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c2" id="c2" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
        
       </tr>
       <tr>
@@ -1019,70 +1022,70 @@
         <td>Quality Control & Quality Check</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c3" id="c3" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
       </tr>
       <tr>
         <td>d.</td>
         <td>Human Resource Managment</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c4" id="c4" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
        
       </tr>
       <tr>
@@ -1090,35 +1093,35 @@
         <td>Power / Tasks Distribution</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c5" id="c5" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
        
       </tr>
       <tr>
@@ -1126,39 +1129,39 @@
         <td>Value Engineering</td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "5">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "4">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "3">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "2">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "1">
     </div>
     </td>
        <td>
     <div class="form-check">
-  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <input class="form-check-input" type="radio" name="c6" id="c6" value = "0">
     </div>
     </td>
-        <td>2</td>
+        <td></td>
        
       </tr>
         <tr>
-        <td colspan="8" align="center"><strong>Total Marks (20)</strong> </td>
+        <td colspan="8" align="center"><strong>Total Marks (30)</strong> </td>
         <td><strong>18</strong></td>
      </tr>
     
@@ -1168,16 +1171,16 @@
         <p class="und">4. Pen Picture</p>
           <i class="fas fa-pencil-alt prefix"></i>
             <div class="form-group shadow-textarea">
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..."></textarea>
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..." name='pen_picture'></textarea>
               </div>
               <br>
             <p class="und">5. Strength (Professional / Personal)</p>
             <!-- <p>a. &nbsp&nbsp___________________________________________________________________________________________________________________________________________________________________</p>
             <p>b. &nbsp&nbsp___________________________________________________________________________________________________________________________________________________________________</p>
             <p>c. &nbsp&nbsp___________________________________________________________________________________________________________________________________________________________________</p> -->
-            <i class="fas fa-pencil-alt prefix"></i>
+            <i class="fas fa-pencil-alt prefix" name= ></i>
             <div class="form-group shadow-textarea">
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..."></textarea>
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..." name='strength'></textarea>
               </div>
             <br>
             <p class="und">6. Weaknesses (Professional / Personal)</p>
@@ -1186,7 +1189,7 @@
             <p>c. &nbsp&nbsp___________________________________________________________________________________________________________________________________________________________________</p> -->
             <i class="fas fa-pencil-alt prefix"></i>
             <div class="form-group shadow-textarea">
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..."></textarea>
+                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..." name='weakness'></textarea>
               </div>
 
               <br>
@@ -1196,16 +1199,16 @@
               <p>c. &nbsp&nbsp___________________________________________________________________________________________________________________________________________________________________</p> -->
               <i class="fas fa-pencil-alt prefix"></i>
               <div class="form-group shadow-textarea">
-                  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..."></textarea>
+                  <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..." name='training'></textarea>
                 </div>     
         </div>
         <br>
         <form class="form-inline" action="">
             <label for="nameio" class="brac">Name of IO:</label>
-            <input type="text" id="nameio" placeholder="" name="">
+            <input type="text" name="io_name" placeholder="" name="">
 
             <label for="desg" class="brac">Designation:</label>
-            <input type="text" id="desg" placeholder="" name="">
+            <input type="text" name="io_desg" placeholder="" name="">
 
             
            
@@ -1289,5 +1292,20 @@
           xmlhttp.send();
       }
   }
+
+//   $('#myform input[type=radio]').on('change', function(event) {
+//   var result = $(this).val();
+//   var result1 = $(this).val();
+//   // var result2 = $(this).val();
+//   $('#result').html(result);
+//   $('#result1').html(result1);
+// })
+$('input[type=radio]').click(function(e) {
+		
+    var a1 = $(this).val(); 
+    $('.result').html(a1);
+
+});
+
 </script>
 </html>
