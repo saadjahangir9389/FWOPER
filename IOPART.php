@@ -54,7 +54,7 @@
   <div class="container">
   <div class="row">
   <div class="col-md-12 welcome-page">
-    
+    <br>
   <img src="logo.jpg" width="80" height="80" class="center">
     
     <h3 align="center">PERFORMANCE EVALUATION REPORT</h3>
@@ -75,33 +75,12 @@
           </div>
 
           <div class="position-item">
-            <!-- <div class="item">
-              <p>Appointment<span class="required">*</span></p>
-              <select required>
-                <option value="0" disabled selected>Please Select Appointment</option>  
-                <option value="1">MTO</option>
-                <option value="2">JM</option>
-                <option value="3">AM</option>
-                <option value="4">DM</option>
-                <option value="5">Manager</option>
-                <option value="5">GM</option>
-                <option value="5">DD</option>
-                <option value="5">Director</option>
-              </select>
-            </div> -->
+            
             <div class="item">
               <p>Appointment<span class="required">*</span></p>
               <input type="text" name="emp_appointment" id ="emp_appointment" required readonly value=""/>
             </div>
-            <!-- <div class="item">
-                <p>Category<span class="required">*</span></p>
-                <select required>
-                    <option value="0" disabled selected>Please Select Category</option>
-                    <option value="1">FS</option>
-                  <option value="2">NMS</option>
-                  <option value="3">MS</option>
-                </select>
-              </div> -->
+           
               <div class="item">
                 <p>Category<span class="required">*</span></p>
                 <input type="text" name="emp_cat" id ="emp_cat" required readonly value=""/>
@@ -1203,26 +1182,24 @@
                 </div>     
         </div>
         <br>
-        <form class="form-inline" action="">
-            <label for="nameio" class="brac">Name of IO:</label>
-            <input type="text" name="io_name" placeholder="" name="">
 
-            <label for="desg" class="brac">Designation:</label>
-            <input type="text" name="io_desg" placeholder="" name="">
+     
+ 
 
-            
-           
-          </form>
+        <div class = 'end'>
+          <div class="form-inline">
+          <div class="form-group" >
+              <label for="nameio" class="und">Name of IO:</label>
+              <input type="text" name="io_name" placeholder="">
+          </div>
+          <div class="form-group"> 
+              <label for="desg" class="und">Designation:</label>
+              <input type="text" name="io_desg" placeholder="">  
+          </div>      
+          </div>
+  </div>
           <br>
-          <!-- <form class="form-inline" action="">
 
-            <label for="sign" class="brac">Signature:</label>
-            <input type="text" id="sign" placeholder="" name="">
-
-            <label for="date" class="brac">Date:</label>
-            <input type="text" id="date" placeholder="" name="">
-          </form>
-          <br> -->
           <div class="btn-block">
           <button name = 'click' type="submit">Submit</button>
         </div>

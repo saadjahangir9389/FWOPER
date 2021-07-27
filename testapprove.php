@@ -69,8 +69,8 @@ if(isset($_POST['view'])){
     // $result = mysqli_query($conn, $select);
 
     echo '<script type = "text/javascript">';
-    echo 'alert("User Approved!");';
-    echo 'window.location.href="jd.php"';
+    // echo 'alert("User Approved!");';
+    echo 'window.location.href="dirpart.php",_blank';
     echo '</script>';
 }
 
