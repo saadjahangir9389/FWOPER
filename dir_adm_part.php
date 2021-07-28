@@ -12,12 +12,12 @@ $date_clicked = date('Y-m-d');
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" type ="text/css" href = "main.css">
-    <title>IO APPROVAL</title>
+    <title>SRO APPROVAL</title>
 </head>
 <body>
     
 <div class="center">
-    <h1>IO PART</h1>
+    <h1>DIR PART</h1>
 
     <table >
         <tr>
@@ -30,7 +30,7 @@ $date_clicked = date('Y-m-d');
 
         <?php
         $i=1;
-            $query = "SELECT * FROM part1 WHERE count = 1 ORDER BY id ASC";
+            $query = "SELECT * FROM part1 WHERE count = 2 ORDER BY id ASC";
             $result = mysqli_query($con, $query);
             while($row = mysqli_fetch_array($result)){
         ?>
@@ -42,10 +42,10 @@ $date_clicked = date('Y-m-d');
             <td><?php echo $row['insert_date_time'];?></td>
           
               <td>
-                <form action ="testapprove.php" method ="POST">
+                <form action ="dir_adm_part.php" method ="POST">
                     <input type = "hidden" name  ="emp_no" value = "<?php echo $row['emp_no'];?>"/>
                     <input type = "hidden" name  ="insert_date_time" value = "<?php echo $row['insert_date_time'];?>"/>
-                    <a href="IOPART.php?id=<?php echo $row['emp_no'];?> "> view </a>
+                    <a href="dirpart.php?id=<?php echo $row['emp_no'];?> "> view </a>
                 </form>
             </td>
             

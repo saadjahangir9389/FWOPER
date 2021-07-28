@@ -48,6 +48,7 @@
   }
 
 //   $records = mysqli_query($con,"select * from part1");
+@$id = $_GET["id"];
 $records = mysqli_query($con,"select * from employees_data ed inner join part1 on ed.emp_no = part1.emp_no");
   while($form_data = mysqli_fetch_array($records)){
       $full_name = $form_data['emp_name'];
@@ -112,11 +113,11 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
     </div>
     </div>
-      <form action="dir_submit.php" method="post" id= 'myform' >
+      <form action="dir_submit.php?id=<?php echo $id ?>" method="post" id= 'myform' >
         <div class="contact-item">
             <div class="item">
               <p>Employee No.<span class="required">*</span></p>
-              <input class = 'input_class' type="text" name="emp_no" id = "emp_no" required readonly value="<?php echo $emp_no?>"/>
+              <input class = 'input_class' type="text" name="emp_no" id = "emp_no" required readonly value="<?php echo $id?>"/>
             </div>
             <div class="item">
               <p>Full Name<span class="required">*</span></p>

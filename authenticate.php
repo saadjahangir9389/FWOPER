@@ -42,7 +42,7 @@
 			// header('Location: jd.php');
 			header('Location: testapprove.php');
 		}elseif($_SESSION['sess_userrole'] == "2"){
-			header('Location: dirpart.php');
+			header('Location: dir_adm_part.php');
 		}elseif($_SESSION['sess_userrole'] == "3"){
 			header('Location: part4.php');
 		}else{

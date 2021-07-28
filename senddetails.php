@@ -4,7 +4,6 @@ $con = mysqli_connect("localhost", "root", "", "admins");
 $emp_no = $_POST["emp_no"];
 $id = $_GET['id'];
 
-
 // $performance = $_POST["performance"];
 // $warnings = $_POST["warnings"];
 // $date_from = $_POST["date_from"];
@@ -59,7 +58,7 @@ while($row = mysqli_fetch_array($result)){
 // }else{
     // $sql = "INSERT INTO part1 (id,emp_no,emp_name,period_from,period_to,warnings,relevantduties,count,insert_date_time,req_count,1a,1b,1c,1d,1e,1f,1g,1h,1i,1_total,2a,2b,2c,2d,2e,2f,2g,2h,2i,2j,2_total,3a,3b,3c,3d,3e,3f,3_total,pen_picture,strength,weakness,training,io_name,io_designation) VALUES ('', '$emp_no', '$emp_name', '$date_from', '$date_to', '$warnings', '$performance',1,'$date_clicked','$count','$a1','$a2','$a3','$a4','$a5','$a6','$a7','$a8','$a9','$a_total','$b1','$b2','$b3','$b4','$b5','$b6','$b7','$b8','$b9','$b10','$b_total','$c1','$c2','$c3','$c4','$c5','$c6','$c_total','$pen_picture','$strength','$weakness','$training','$io_name','$io_desg')";
 
-    $sql = "UPDATE part1 set  1a='$a1',1b='$a2',1c='$a3',1d='$a4',1e='$a5',1f='$a6',1g='$a7',1h='$a8',1i='$a9',1_total='$a_total',2a='$b1',2b='$b2',2c='$b3',2d='$b4',2e='$b5',2f='$b6',2g='$b7',2h='$b8',2i='$b9',2j='$b10',2_total='$b_total',3a='$c1',3b='$c2',3c='$c3',3d='$c4',3e='$c5',3f='$c6',3_total='$c_total',pen_picture='$pen_picture',strength='$strength',weakness='$weakness',training='$training',io_name='$io_name',io_designation='$io_desg' where emp_no = '$emp_no' ";
+    $sql = "UPDATE part1 set  1a='$a1',1b='$a2',1c='$a3',1d='$a4',1e='$a5',1f='$a6',1g='$a7',1h='$a8',1i='$a9',1_total='$a_total',2a='$b1',2b='$b2',2c='$b3',2d='$b4',2e='$b5',2f='$b6',2g='$b7',2h='$b8',2i='$b9',2j='$b10',2_total='$b_total',3a='$c1',3b='$c2',3c='$c3',3d='$c4',3e='$c5',3f='$c6',3_total='$c_total',pen_picture='$pen_picture',strength='$strength',weakness='$weakness',training='$training',io_name='$io_name',io_designation='$io_desg',count=2 where emp_no = '$emp_no' ";
     if (mysqli_query($con, $sql)) {
         // header("Location: IOPART.php?id=$id&status=success");
            header("Location: testapprove.php?id=$id&status=success");
