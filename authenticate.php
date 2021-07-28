@@ -36,13 +36,13 @@
 		session_write_close();
 
 		if( $_SESSION['sess_userrole'] == "0"){
-			header('Location: IOPART.php');
+			header('Location: emp-info-form.php');
 			// header('Location: adminhome.php');
 		}elseif($_SESSION['sess_userrole'] == "1"){
 			// header('Location: jd.php');
 			header('Location: testapprove.php');
 		}elseif($_SESSION['sess_userrole'] == "2"){
-			header('Location: part3.php');
+			header('Location: dirpart.php');
 		}elseif($_SESSION['sess_userrole'] == "3"){
 			header('Location: part4.php');
 		}else{

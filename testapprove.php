@@ -17,7 +17,7 @@ $date_clicked = date('Y-m-d');
 <body>
     
 <div class="center">
-    <h1>Requests</h1>
+    <h1>IO PART</h1>
 
     <table >
         <tr>
@@ -45,8 +45,7 @@ $date_clicked = date('Y-m-d');
                 <form action ="testapprove.php" method ="POST">
                     <input type = "hidden" name  ="emp_no" value = "<?php echo $row['emp_no'];?>"/>
                     <input type = "hidden" name  ="insert_date_time" value = "<?php echo $row['insert_date_time'];?>"/>
-                    <input type = "submit" name  ="view" value = "View"/>
-                    <input type = "submit" name  ="delete" value = "Delete"/>
+                    <a href="IOPART.php?id=<?php echo $row['emp_no'];?> "> view </a>
                 </form>
             </td>
             
@@ -60,42 +59,6 @@ $date_clicked = date('Y-m-d');
   
 </div>
 
-<?php
-
-if(isset($_POST['view'])){
-    // $id = $_POST['id'];
-
-    // $select = "UPDATE tbl_users SET status = 'approved' WHERE id = '$id'";
-    // $result = mysqli_query($conn, $select);
-
-    echo '<script type = "text/javascript">';
-    // echo 'alert("User Approved!");';
-    echo 'window.location.href="dirpart.php",_blank';
-    echo '</script>';
-}
-
-if(isset($_POST['delete'])){
-    $emp_no = $_POST['emp_no'];
-    $insert_date_time = $_POST["insert_date_time"];
-
-    if($insert_date_time!=$date_clicked){
-        $select = "DELETE FROM part1 WHERE emp_no = '$emp_no' and insert_date_time ='$insert_date_time'";
-        $result = mysqli_query($con, $select);
-    echo '<script type = "text/javascript">';
-    echo 'alert("Request Deleted ");';
-    echo 'window.location.href = "testapprove.php"';
-    echo '</script>';
-    }
-    else{
-        echo '<script type = "text/javascript">';
-        echo 'alert("Error ! Requests from same date cannot delete delete tomorrow");';
-        echo 'window.location.href = "testapprove.php"';
-        echo '</script>';
-       
-    }
-}
-
-?>
 
 </body>
 </html>

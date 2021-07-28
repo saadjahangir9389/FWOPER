@@ -1279,12 +1279,12 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
         <label class="form-check-label" for="c6"><p class="brac"> Continue in same salary</p></label>
             </div>
                 <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="pay_prom_recom" i value = "raise" >
+            <input class="form-check-input" type="radio" name="pay_prom_recom"  value = "raise" >
             <label class="form-check-label" for="c6"><p class="brac"> To be given raise</p></label>
                 </div>
                        
               <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="pay_prom_recom" id="c6" value = "promoted" >
+            <input class="form-check-input" type="radio" name="pay_prom_recom" value = "promoted" >
             <label class="form-check-label" for="c6"><p class="brac"> To be promoted</p></label>
                 </div>
                 <br><br>
@@ -1293,12 +1293,12 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
               <p class="brac">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* 2 x Marks by Dir / Comd / COO / SRO to be endorsed on ack of special / extra ordinary task / assignment performed by the indl with brief <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description or <strong>NIL</strong>.</p>
               <br>
               <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="c6" id="c6" value = "0" >
+            <input class="form-check-input" type="radio" name="special_assignment"  value = "no" >
             <label class="form-check-label" for="c6"><p class="brac"> <strong>NIL</strong></p></label>
                 </div>
                 <br><br>
               <div class="form-group shadow-textarea">
-                <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="3" placeholder="Write reason here..."></textarea>
+                <textarea class="form-control z-depth-1" rows="3" name="spec_assgn_desc" placeholder="Write Description here..."></textarea>
               </div>
               <br>
               <p class = "und"  >Marks Obtain : 66 out of 97</p>

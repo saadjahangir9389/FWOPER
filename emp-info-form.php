@@ -62,7 +62,7 @@ echo "Database not connected";
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
     </div>
     </div>
-      <form action="senddetails.php" method="POST">
+      <form action="ro_submit.php" method="POST">
         <div class="contact-item">
             <div class="item">
               <p>Employee No.<span class="required">*</span></p>

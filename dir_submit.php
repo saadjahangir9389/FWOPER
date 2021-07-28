@@ -6,6 +6,8 @@ $reasons = $_POST['io_assesment_reason'];
 $empl_recom = $_POST['empl_recom'];
 $pay_prom_recom = $_POST['pay_prom_recom'];
 $endorsement = $_POST['endorsement'];
+$special_assignment = $_POST['special_assignment'];
+$spec_assgn_desc = $_POST['spec_assgn_desc'];
 
 
 
@@ -43,7 +45,7 @@ while($row = mysqli_fetch_array($result)){
 // }
 
 
-    $sql = "UPDATE part1  SET io_assesment_agree = '$io_assesment',io_assesment_reason ='$reasons',employment_recom = '$empl_recom',pay_prom_recom='$pay_prom_recom',endorsement='$endorsement', count=2 where emp_no = '$emp_no'";
+    $sql = "UPDATE part1  SET io_assesment_agree = '$io_assesment',io_assesment_reason ='$reasons',employment_recom = '$empl_recom',pay_prom_recom='$pay_prom_recom',special_assignment='$special_assignment',spec_assgn_desc='$spec_assgn_desc',endorsement='$endorsement', count=1 where emp_no = '$emp_no'";
 
     if (mysqli_query($con, $sql)) {
         header("Location: dirpart.php?status=success");

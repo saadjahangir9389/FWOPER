@@ -4,7 +4,7 @@
     if(!isset($_SESSION['sess_username']) && $role!="0"){
       header('Location: index.php?err=2');
     }
-
+    
     
 ?>
 
@@ -43,13 +43,35 @@
   }
   ?>
   <?php
+ 
   include_once("navbar.php");
   $con = mysqli_connect("localhost", "root", "", "admins");
 
   if (!$con) {
   echo "Database not connected";
   }
-  
+   @$id = $_GET["id"];
+   $records = mysqli_query($con,"select * from employees_data ed inner join part1 on ed.emp_no = part1.emp_no WHERE part1.emp_no = '$id'");
+
+  //  $records = mysqli_query($con,"SELECT * from part1");
+
+  while($form_data = mysqli_fetch_array($records)){
+      $full_name = $form_data['emp_name'];
+      $emp_no = $form_data['emp_no'];
+      $appointment = $form_data['emp_appointment'];
+      $category = $form_data['emp_cat'];
+      $emp_doe = $form_data['emp_doe'];
+      $qualification = $form_data['emp_qualification'];
+      $directorate = $form_data['emp_dir'];
+      $proj_loc = $form_data['emp_pro_loc'];
+      $period_from = $form_data['period_from'];
+      $period_to = $form_data['period_to'];
+      $warnings = $form_data['warnings'];
+      $relevent_work = $form_data['relevantduties'];
+     
+
+  }
+  mysqli_close($con);
   ?>
   <div class="container">
   <div class="row">
@@ -62,15 +84,15 @@
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
     </div>
     </div>
-      <form action="senddetails.php" method="post" id= 'myform' >
+      <form action="senddetails.php?id=<?php echo $id ?>" method="post" id= 'myform' >
         <div class="contact-item">
             <div class="item">
               <p>Employee No.<span class="required">*</span></p>
-              <input type="text" name="emp_no" id = "emp_no" required onkeyup="GetDetail(this.value)" value=""/>
+              <input class = 'input_class' type="text" name="emp_no" id = "emp_no" required readonly value="<?php echo $id?>"/>
             </div>
             <div class="item">
               <p>Full Name<span class="required">*</span></p>
-              <input type="text" name="emp_name" id = "emp_name" required readonly value=""/>
+              <input class = 'input_class' type="text" name="emp_name" id = "emp_name"  required readonly value="<?php echo $full_name?>"/>
             </div>
           </div>
 
@@ -78,91 +100,56 @@
             
             <div class="item">
               <p>Appointment<span class="required">*</span></p>
-              <input type="text" name="emp_appointment" id ="emp_appointment" required readonly value=""/>
+              <input class = 'input_class' type="text" name="emp_appointment" id ="emp_appointment" required readonly value="<?php echo $appointment?>"/>
             </div>
            
               <div class="item">
                 <p>Category<span class="required">*</span></p>
-                <input type="text" name="emp_cat" id ="emp_cat" required readonly value=""/>
+                <input class = 'input_class' type="text" name="emp_cat" id ="emp_cat" required readonly value="<?php echo $category?>"/>
               </div>
 
               <div class="item">
                 <p>Date of Emp<span class="required">*</span></p>
-                <input type="text" name="emp_doe" id ="emp_doe" readonly required/>
+                <input class = 'input_class' type="text" name="emp_doe" id ="emp_doe"  readonly required value="<?php echo $emp_doe?>">
               </div>
-
-              <!-- <div class="item">
-                <p>Qualification<span class="required">*</span></p>
-                <select required>
-                    <option value="0" disabled selected>Please Select Qualification</option>
-                    <option value="1">BS</option>
-                  <option value="2">MS</option>
-                  <option value="3">PHD</option>
-                </select>
-              </div> -->
               <div class="item">
                 <p>Qualification<span class="required">*</span></p>
-                <input type="text" name="emp_qualification" id = "emp_qualification"  readonly required value=""/>
+                <input class = 'input_class' type="text" name="emp_qualification" id = "emp_qualification" readonly required value="<?php echo $qualification?>"/>
               </div>
 
-              <!-- <div class="item">
-                <p>Directorate / Group / Unit <span class="required">*</span></p>
-                <select required>
-                    <option value="0" disabled selected>Please Select Directorate / Group / Unit</option>
-                    <option value="1">IT</option>
-                  <option value="2">Fin</option>
-                  <option value="3">HR</option>
-                </select>
-              </div> -->
+            
 
               <div class="item">
                 <p>Directorate / Group / Unit<span class="required">*</span></p>
-                <input type="text" name="emp_dir" id = "emp_dir"  readonly required value=""/>
+                <input class = 'input_class' type="text" name="emp_dir" id = "emp_dir"   readonly required value="<?php echo $directorate?>"/>
               </div>
 
-              <!-- <div class="item">
-                <p>Project / Location<span class="required">*</span></p>
-                <select required>
-                    <option value="0" disabled selected>Please Select Location</option>
-                    <option value="1">RWP</option>
-                  <option value="2">ISB</option>
-                  <option value="3">KAR</option>
-                </select>
-              </div> -->
+             
 
               <div class="item">
                 <p>Project / Location<span class="required">*</span></p>
-                <input type="text" name="emp_pro_loc" id ="emp_pro_loc" required readonly value=""/>
+                <input class = 'input_class' type="text" name="emp_pro_loc" id ="emp_pro_loc" required readonly value="<?php echo $proj_loc?>"/>
               </div>
 
               <div class="item">
                 <p>Performance Peroid : From<span class="required">*</span></p>
-                <input type="date" name="date_from" required/>
-                <i class="fas fa-calendar-alt"></i>
+                <input class = 'input_class' type="text" name="date_from" required readonly value ="<?php echo $period_from?>"/>
+
               </div>
               <div class="item">
                 <p>To<span class="required">*</span></p>
-                <input type="date" name="date_to" required/>
-                <i class="fas fa-calendar-alt"></i>
+                <input class = 'input_class' type="text" name="date_to" required readonly value = "<?php echo $period_to?>"/>
+               
               </div>
 
               <div class="item">
                 <p>Number of Warnings / Explanation Issued During the Year (if any)  <span class="required">*</span></p>
-                <select name="warnings" required>
-                    <option value="0" disabled selected>Please Select Warning Count</option>
-                    <option value="NIL">NIL</option>
-                  <option value="2">1</option>
-                  <option value="3">2</option>
-                  <option value="3">3</option>
-                </select>
+                <input class = 'input_class' type="text" name="date_to" required readonly value = "<?php echo $warnings?>"/>
               </div>
               <div class="item">
                 <p>Is he/she Performing Duties relevent to his/her Qual & Exp (Yes / No)  <span class="required">*</span></p>
-                <select name = "performance" required>
-                    <option value="0" disabled selected>Please Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
+                <input class = 'input_class' type="text" name="date_to" required readonly value = "<?php echo $relevent_work?>"/>
+
               </div>
              
           <!-- div container end here     -->
@@ -1210,79 +1197,5 @@
   </body>
 </div>
 
-<script>
-  
-  // onkeyup event will occur when the user 
-  // release the key and calls the function
-  // assigned to this event
-  function GetDetail(str) {
-      if (str.length == 0) {
-          document.getElementById("emp_name").value = "";
-          document.getElementById("emp_appointment").value = "";
-          document.getElementById("emp_cat").value = "";
-          document.getElementById("emp_doe").value = "";
-          document.getElementById("emp_qualification").value = "";
-          document.getElementById("emp_dir").value = "";
-          document.getElementById("emp_pro_loc").value = "";
-          return;
-      }
-      else {
 
-          // Creates a new XMLHttpRequest object
-          var xmlhttp = new XMLHttpRequest();
-          xmlhttp.onreadystatechange = function () {
-
-              // Defines a function to be called when
-              // the readyState property changes
-              if (this.readyState == 4 && 
-                      this.status == 200) {
-                    
-                  // Typical action to be performed
-                  // when the document is ready
-                  var myObj = JSON.parse(this.responseText);
-
-                  // Returns the response data as a
-                  // string and store this array in
-                  // a variable assign the value 
-                  // received to first name input field
-                    
-                  document.getElementById("emp_name").value = myObj[0];
-                    
-                  // Assign the value received to
-                  // last name input field
-                  document.getElementById("emp_appointment").value = myObj[1];
-                  document.getElementById("emp_cat").value = myObj[2];
-                  document.getElementById("emp_doe").value = myObj[3];
-                  document.getElementById("emp_qualification").value = myObj[4];
-                  document.getElementById("emp_dir").value = myObj[5];
-                  document.getElementById("emp_pro_loc").value = myObj[6];
-
-
-                  
-              }
-          };
-
-          // xhttp.open("GET", "filename", true);
-          xmlhttp.open("GET", "backend-search.php?emp_no=" + str, true);
-            
-          // Sends the request to the server
-          xmlhttp.send();
-      }
-  }
-
-//   $('#myform input[type=radio]').on('change', function(event) {
-//   var result = $(this).val();
-//   var result1 = $(this).val();
-//   // var result2 = $(this).val();
-//   $('#result').html(result);
-//   $('#result1').html(result1);
-// })
-$('input[type=radio]').click(function(e) {
-		
-    var a1 = $(this).val(); 
-    $('.result').html(a1);
-
-});
-
-</script>
 </html>
