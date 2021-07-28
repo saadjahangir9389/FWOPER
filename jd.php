@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
     $role = $_SESSION['sess_userrole'];
     if(!isset($_SESSION['sess_username']) && $role!="1"){
@@ -13,6 +13,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -22,8 +24,8 @@
 
 <?php
 include_once("navbar.php");
-include("part2_customcss.css");
-include("employee_form.php");
+
+//  include("employee_form.php");
 ?>
 
 <div class="container">
@@ -85,7 +87,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
 
               <tr>
@@ -122,7 +124,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
               <tr>
                 <td>c.</td>
@@ -193,7 +195,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
               <tr>
                 <td>e.</td>
@@ -229,7 +231,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
               <tr>
                 <td>f.</td>
@@ -265,7 +267,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
               <tr>
                 <td>g.</td>
@@ -301,7 +303,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
               <tr>
                 <td>h.</td>
@@ -337,7 +339,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td></td>
-               
+
               </tr>
 
               <tr>
@@ -379,7 +381,7 @@ include("employee_form.php");
                 <td colspan="8" align="center"><strong>Total Marks (45)</strong> </td>
                 <td><strong></strong></td>
              </tr>
-             
+
         </tbody>
       </table>
     </div>
@@ -439,7 +441,7 @@ include("employee_form.php");
                       </div>
                 </td>
                 <td>2</td>
-               
+
               </tr>
 
               <tr>
@@ -1005,13 +1007,13 @@ include("employee_form.php");
                           </div>
                     </td>
                     <td>2</td>
-                   
+
                   </tr>
                     <tr>
                     <td colspan="8" align="center"><strong>Total Marks (20)</strong> </td>
                     <td><strong></strong></td>
                  </tr>
-                
+
             </tbody>
           </table>
           <p class = "brac"align="center"></p>
@@ -1049,7 +1051,7 @@ include("employee_form.php");
               <i class="fas fa-pencil-alt prefix"></i>
               <div class="form-group shadow-textarea">
                   <textarea class="form-control z-depth-1" name="textarea4" id="exampleFormControlTextarea6" rows="5" placeholder="Write something here..."></textarea>
-                </div>     
+                </div>
         </div>
         <br>
 
@@ -1074,7 +1076,7 @@ include("employee_form.php");
 </div>
 <script>
  // the selector will match all input controls of type :checkbox
-// and attach a click event handler 
+// and attach a click event handler
 $("input:checkbox").on('click', function() {
   // in the handler, 'this' refers to the box clicked on
   var $box = $(this);

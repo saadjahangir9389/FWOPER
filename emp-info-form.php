@@ -1,4 +1,4 @@
-<?php 
+<?php
     session_start();
     $role = $_SESSION['sess_userrole'];
     if(!isset($_SESSION['sess_username']) && $role!="0"){
@@ -11,16 +11,15 @@
   <head>
     <title>Performance Evaluation Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js">
-    </script>  
+    </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     </script>
-      <?php
-      include("customcss.php");
-      ?>
+
 
 
   </head>
@@ -40,9 +39,6 @@
 
   }
   ?>
-
-
-
   </div>
    <?php
    include_once("navbar.php");
@@ -52,21 +48,15 @@ if (!$con) {
 echo "Database not connected";
 }
 
-  $sql = "SELECT * FROM `employees_data`";
-  $result = mysqli_query($con,$sql);
-  $row = mysqli_fetch_assoc($result);
-    $employeeno = $row["emp_no"];
-
-
 ?>
 
 
-  <div class="container homepage">
+  <div class="container">
   <div class="row">
   <div class="col-md-12 welcome-page">
-    
+
   <img src="logo.jpg" width="80" height="80" class="center">
-    
+
     <h3 align="center">PERFORMANCE EVALUATION REPORT</h3>
     <p class = "und" align="center" >PART-I</p>
     <p class = "und" align="center" >EMPLOYEE INFORMATION</p>
@@ -88,7 +78,7 @@ echo "Database not connected";
             <!-- <div class="item">
               <p>Appointment<span class="required">*</span></p>
               <select required>
-                <option value="0" disabled selected>Please Select Appointment</option>  
+                <option value="0" disabled selected>Please Select Appointment</option>
                 <option value="1">MTO</option>
                 <option value="2">JM</option>
                 <option value="3">AM</option>
@@ -195,22 +185,19 @@ echo "Database not connected";
                   <option value="no">No</option>
                 </select>
               </div>
-              
+
           </div>
         <div class="btn-block">
- <?php
-//        if (emp_no == )
- ?>
-          <button type="submit">Submit</button>
+          <button name = 'click' type="submit">Submit</button>
         </div>
       </form>
-    
-   
+
+  
 
 
     <script>
-  
-      // onkeyup event will occur when the user 
+
+      // onkeyup event will occur when the user
       // release the key and calls the function
       // assigned to this event
       function GetDetail(str) {
@@ -232,20 +219,20 @@ echo "Database not connected";
 
                   // Defines a function to be called when
                   // the readyState property changes
-                  if (this.readyState == 4 && 
+                  if (this.readyState == 4 &&
                           this.status == 200) {
-                        
+
                       // Typical action to be performed
                       // when the document is ready
                       var myObj = JSON.parse(this.responseText);
 
                       // Returns the response data as a
                       // string and store this array in
-                      // a variable assign the value 
+                      // a variable assign the value
                       // received to first name input field
-                        
+
                       document.getElementById("emp_name").value = myObj[0];
-                        
+
                       // Assign the value received to
                       // last name input field
                       document.getElementById("emp_appointment").value = myObj[1];
@@ -256,13 +243,13 @@ echo "Database not connected";
                       document.getElementById("emp_pro_loc").value = myObj[6];
 
 
-                      
+
                   }
               };
 
               // xhttp.open("GET", "filename", true);
               xmlhttp.open("GET", "backend-search.php?emp_no=" + str, true);
-                
+
               // Sends the request to the server
               xmlhttp.send();
           }

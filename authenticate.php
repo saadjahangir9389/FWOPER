@@ -1,6 +1,5 @@
 <?php 
-	require 'database-config.php';
-
+	include_once("database-config.php");
 	session_start();
 
 	$username = "";
@@ -37,10 +36,11 @@
 		session_write_close();
 
 		if( $_SESSION['sess_userrole'] == "0"){
-			header('Location: emp-info-form.php');
+			header('Location: IOPART.php');
 			// header('Location: adminhome.php');
 		}elseif($_SESSION['sess_userrole'] == "1"){
-			header('Location: jd.php');
+			// header('Location: jd.php');
+			header('Location: testapprove.php');
 		}elseif($_SESSION['sess_userrole'] == "2"){
 			header('Location: part3.php');
 		}elseif($_SESSION['sess_userrole'] == "3"){
