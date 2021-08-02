@@ -131,7 +131,6 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
               <p>Appointment<span class="required">*</span></p>
               <input class = 'input_class' type="text" name="emp_appointment" id ="emp_appointment" required readonly value="<?php echo $appointment?>"/>
             </div>
-           
               <div class="item">
                 <p>Category<span class="required">*</span></p>
                 <input class = 'input_class' type="text" name="emp_cat" id ="emp_cat" required readonly value="<?php echo $category?>"/>
@@ -183,7 +182,7 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
 
               </div>
              
-          <!-- div container end here     -->
+         
           </div>
           <br>
           <hr>
@@ -1283,7 +1282,6 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
             <input class="form-check-input" type="radio" name="pay_prom_recom"  value = "raise" >
             <label class="form-check-label" for="c6"><p class="brac"> To be given raise</p></label>
                 </div>
-                       
               <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="pay_prom_recom" value = "promoted" >
             <label class="form-check-label" for="c6"><p class="brac"> To be promoted</p></label>
@@ -1304,11 +1302,8 @@ $records = mysqli_query($con,"select * from employees_data ed inner join part1 o
               <br>
               <p class = "und"  >Marks Obtain : 66 out of 97</p>
               <br>
-
               <p class="brac">Recommended for Endorsement of DG FWO on Excellent Performances? </p>
-
               <br>
-
               <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" name="endorsement"  value = "yes" >
             <label class="form-check-label" for="c6"><p class="brac"> <strong>Yes</strong></p></label>
